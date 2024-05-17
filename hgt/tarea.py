@@ -8,10 +8,15 @@ class Tarea:
     #Métodos CRUD
     
     def read(self):
-        pass
+        return f"Esta es la tarea: {self.tarea}, su estado es: {self.estado} y su id: {self.id}"
 
-    def update(self):
-        pass
+
+    def update(self, estadoNuevo:bool):
+        self.id = estadoNuevo
+        return estadoNuevo
+
 
     def delete(self):
-        pass
+        del self.tarea
+        del self.id
+        del self.estado
