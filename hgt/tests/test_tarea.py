@@ -1,6 +1,6 @@
 import pytest
 
-from tarea import Tarea
+from hgt.tarea import Tarea
 
 @pytest.fixture
 def tarea():
@@ -8,15 +8,15 @@ def tarea():
 
 
 def test_read(tarea):
-    assert tarea.read() == "Tarea1, False, 1"
+    assert tarea.read() == "Tarea1 False 1"
 
 
 def test_update(tarea):
     tarea.update("Tarea1Nueva", True, 1)
-    assert tarea.read() == "Tarea1Nueva, True, 1"
+    assert tarea.read() == "Tarea1Nueva True 1"
 
 
 def test_delete(tarea):
     tarea.delete()
-    assert tarea.read() == None
+    assert tarea.read() == "None None None"
 
