@@ -11,12 +11,13 @@ class Tarea:
         return f"Esta es la tarea: {self.tarea}, su estado es: {self.estado} y su id: {self.id}"
 
 
-    def update(self, estadoNuevo:bool):
-        self.id = estadoNuevo
-        return estadoNuevo
+    def update(self, tareaNueva, estadoNuevo, idNuevo):
+        self.tarea = tareaNueva
+        self.estado = estadoNuevo
+        self.id = idNuevo   
 
 
     def delete(self):
-        del self.tarea
-        del self.id
-        del self.estado
+        self.tarea = None
+        self.id = None
+        self.estado = None
