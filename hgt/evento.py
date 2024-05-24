@@ -1,6 +1,7 @@
 from tarea import Tarea
 class Evento(Tarea):
-    def __init__(self, fechaInicio, horaInicio, fechaFin, horaFin):
+    def __init__(self, tarea, estado, id, fechaInicio:str, horaInicio:str, fechaFin:str, horaFin:str):
+        super.__init__(tarea, estado, id)
         self.fechaInicio = fechaInicio
         self.horaInicio = horaInicio
         self.fechaFin = fechaFin
