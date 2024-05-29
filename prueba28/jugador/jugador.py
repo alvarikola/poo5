@@ -9,3 +9,12 @@ class Jugador(Persona):
 
     def read(self) -> str:
         return super().read() + "," + self.deporte
+    
+
+    def update(self, nombreNuevo, deporteNuevo):
+        super().update(nombreNuevo)
+        self.deporte = deporteNuevo
+    
+    def delete(self):
+        super().delete()
+        self.deporte = None
