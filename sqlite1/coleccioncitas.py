@@ -4,10 +4,10 @@ from cita import Cita
 
 SQLMDLCREATE = """
     CREATE TABLE IF NOT EXISTS citas (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    cita TEXT NOT NULL
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        cita TEXT NOT NULL
     ) 
-"""
+    """
 
 SQLDDLSELECT = """
     SELECT * FROM citas
